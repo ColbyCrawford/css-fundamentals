@@ -1,0 +1,93 @@
+/* Config */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+    --clr-neutral-200: 218, 30%, 93%;
+    --clr-neutral-400: 218, 25%, 85%;
+
+    --ff-primary: 'Roboto', sans-serif;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+}
+
+
+
+/* CSS reset */
+
+html, :root {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+/* Base styles */
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-light);
+    background: hsl(var(--clr-neutral-200));
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--fw-regular);
+}
+
+
+
+/* Modules */
+
+.box {
+    padding: 10px;
+    background-color: coral;
+}
+
+.box-1 {
+    margin-bottom: -75px;
+}
+
+.box-2 {
+    margin-top: 100px;
+}
+
+
+
+/* Flex Container */
+
+.flex-container {
+    display: flex;
+    gap: 1rem;
+    background-color: hsl(var(--clr-neutral-400));
+    padding: 1rem;
+}
+
+.flex-item {
+    padding: 2rem;
+    background-color:blueviolet;
+}
+
+.flex-item:first-child {
+    padding-bottom: 100px;
+}
+
+.flex-item:nth-child(2) {
+    margin-top: 10rem;
+}
+
+
+
+/* Span */
+
+.span {
+    display: inline-block;
+    background-color: honeydew;
+    padding-block: 1rem;
+}
