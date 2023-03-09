@@ -9,11 +9,10 @@
 </head>
 <body>
     
-    <div class="common-page-header"></div>
+    <div class="common-page-banner"></div>
     
     <!-- STATIC -->
     <div class="box box--static">
-        <span class="box-index-tracker">00</span>
         <h2>I'm a static element:</h2>
         <ul class="box-list">
             <li class="box-list-item">I'm the default value</li>
@@ -23,8 +22,8 @@
     </div>
 
     <!-- STICKY -->
-    <div class="box box--sticky | u-is-sticky">
-        <span class="box-index-tracker">00</span>
+    <!-- <div class="box box--sticky | u-is-sticky">
+        <span class="box-index-tracker">10</span>
         <h2>I'm a sticky element:</h2> 
         <ul class="box-list">
             <li class="box-list-item">I'm positioned in normal document flow</li>
@@ -32,17 +31,28 @@
             <li class="box-list-item">I stick to my nearest ancestor that has a scrolling feature</li>
             <li>I <strong>ALWAYS</strong> create a new stacking context</li>
         </ul>
-    </div>
+    </div> -->
 
      <!-- ABSOLUTE -->
-     <div class="box box--absolute | u-is-absolute">
-        <span class="box-index-tracker">00</span>
+     <!-- <div class="box box--absolute | u-is-absolute">
+        <span class="box-index-tracker">90</span>
         <h2>I'm an absolute element:</h2>
         <ul class="box-list">
             <li class="box-list-item">I'm removed from the normal document flow</li>
             <li class="box-list-item">Take up no space in the normal document flow</li>
             <li class="box-list-item">Am positioned relative to closest positioned ancestor</li>
             <li class="box-list-item">I don't collapse margins</li>
+            <li class="box-list-item">I create a new stacking context when my z-index is set to anything other than auto</li>
+        </ul>
+    </div> -->
+
+    <!-- RELATIVE -->
+    <div class="box box--relative | u-is-relative">
+        <span class="box-index-tracker">00</span>
+        <h2>I'm a relative element</h2>
+        <ul class="box-list">
+            <li class="box-list-item">I'm positioned relative to the normal document flow</li>
+            <li class="box-list-item">My offset doesn't affect any other elements</li>
             <li class="box-list-item">I create a new stacking context when my z-index is set to anything other than auto</li>
         </ul>
     </div>
@@ -56,17 +66,6 @@
             <li class="box-list-item">Take up no space in the normal document flow</li>
             <li class="box-list-item">Stay in same position when scrolled</li>
             <li class="box-list-item">I <strong>ALWAYS</strong> create a new stacking context</li>
-        </ul>
-    </div>
-
-    <!-- RELATIVE -->
-    <div class="box box--relative | u-is-relative">
-        <span class="box-index-tracker">00</span>
-        <h2>I'm a relative element</h2>
-        <ul class="box-list">
-            <li class="box-list-item">I'm positioned relative to the normal document flow</li>
-            <li class="box-list-item">My offset doesn't affect any other elements</li>
-            <li class="box-list-item">I create a new stacking context when my z-index is set to anything other than auto</li>
         </ul>
     </div>
 

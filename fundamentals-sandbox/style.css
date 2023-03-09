@@ -1,0 +1,131 @@
+/* Config */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+    --clr-neutral-200: 218, 30%, 93%;
+    --clr-neutral-400: 218, 25%, 85%;
+    --clr-neutral-400: 218, 25%, 85%;
+
+    --ff-primary: 'Roboto', sans-serif;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+}
+
+
+
+/* CSS reset */
+
+html, :root {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body, ul, h2 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Typography styles */
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-light);
+    background: hsl(var(--clr-neutral-200));
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--fw-regular);
+}
+
+
+/* Layout - container */
+
+.container {
+    --inline-margin: 64px;
+
+    max-width: 1110px;
+    width: calc(100% - (var(--inline-margin) * 2));
+    margin-inline: auto;
+}
+
+
+/* Layout - common-page-banner */
+
+.common-page-banner {
+    min-block-size: 40vh;
+    background-image: url(//picsum.photos/800/600);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/* Layout - main-nav */
+
+.main-nav {
+    position: sticky;
+    top: 0;
+    padding: 1.5rem 4rem;
+    background-color: blueviolet;
+    color: hsl(var(--clr-neutral-200));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-nav-list {
+    display: flex;
+    gap: 2.5rem;
+}
+
+
+/* Layout - main */
+
+.site-main {
+    margin-top: 2rem;
+    min-height: 100px;
+}
+
+.site-main-content {
+    padding: 4rem 3rem;
+    background-color: hsla(var(--clr-neutral-400));
+    min-height: 200vh;
+    text-align: center;
+}
+
+
+
+/* Elements */
+
+.span {
+    background-color: antiquewhite;
+    padding: 2rem;
+    margin-top: 100px;
+}
+
+
+/* Utilities */
+
+.u-inline-block { display: inline-block !important; }
+
