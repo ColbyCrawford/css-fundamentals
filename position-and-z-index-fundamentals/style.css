@@ -1,0 +1,138 @@
+/* Config */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+    --clr-neutral-200: 218, 30%, 93%;
+    --clr-neutral-400: 218, 25%, 85%;
+
+    --ff-primary: 'Roboto', sans-serif;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+}
+
+
+
+/* CSS reset */
+
+html, :root {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+/* Base styles */
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-light);
+    background: hsl(var(--clr-neutral-200));
+    min-height: 200vh;
+    overflow: none;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--fw-regular);
+}
+
+
+
+/* Module - box */
+
+.box {
+    padding: 2rem;
+    position: relative;
+}
+
+.box-list-item {
+    padding: 0.25rem;
+}
+
+.box-index-tracker {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    background-color: black;
+    border-radius: 100vh;
+}
+
+/* sticky */
+.box--sticky { 
+    background-color: slateblue;
+    color: hsl(var(--clr-neutral-200));
+    top: 0;
+    z-index: 1;
+}
+/* fixed */
+.box--fixed {
+    background-color: darkmagenta;
+    color: hsl(var(--clr-neutral-200));
+    z-index: auto;
+}
+/* absolute */
+.box--absolute {
+    background-color: blueviolet;
+    color: hsl(var(--clr-neutral-200));
+    top: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+/* relative */
+.box--relative {
+    background-color:goldenrod;
+    color: hsl(var(--clr-neutral-200));
+    z-index: auto;
+}
+/* static */
+.box--static {
+    background-color:darkslategray;
+    color: hsl(var(--clr-neutral-200));
+    z-index: auto;
+}
+
+
+
+/* Layout - common-page-header */
+
+.common-page-header {
+    min-block-size: 30vh;
+    background-image: url(//picsum.photos/800/600);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+/* Utilities */
+
+.u-is-sticky {
+    position: sticky;
+}
+
+.u-is-fixed {
+    position: fixed;
+}
+
+.u-is-absolute {
+    position: absolute;
+}
+
+.u-is-relative {
+    position: relative;
+}
+
+.u-index-5 {
+    z-index: 5;
+}
