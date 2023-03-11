@@ -57,6 +57,26 @@ h6, .heading-6 {
     margin-bottom: 5rem;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* grid-item */
+
+.grid-item {
+  background-color: hsl(var(--clr-accent-400));
+  padding-block: 4rem;
+}
+
+.grid-item-1 {
+  width: 100px;
+}
+
+.grid-item-2 {
+  width: 200px;
+}
 
 
 /* flex-item */
