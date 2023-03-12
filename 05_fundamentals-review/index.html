@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Fundamentals | Review</title>
+</head>
+
+<body>
+
+    <div class="page-banner"></div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="main-nav-list">
+                <li class="main-nav-item">
+                    <a class="main-nav-link" href="#">BOX MODEL</a>
+                </li>
+                <li class="main-nav-item">
+                    <a class="main-nav-link" href="#">FLOW</a>
+                </li>
+                <li class="main-nav-item">
+                    <a class="main-nav-link" href="#">POSITIONING</a>
+                </li>
+                <li class="main-nav-item">
+                    <a class="main-nav-link" href="#">COLLAPSING MARGINS</a>
+                </li>
+                <li class="main-nav-item">
+                    <a class="main-nav-link" href="#">:: ELEMENTS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- SECTION | box model -->
+        <section class="page-section">
+            <span class="overline">CSS FUNDAMENTALS</span>
+            <h2 class="heading-2">Box Model<h2>
+            <h3 class="heading-3">There are two common types of boxes in CSS:</h3>    
+            <ol class="ordered-list">
+                <li class="ordered-list-item">Block boxes</li>
+                <li class="ordered-list-item">Inline boxes</li>
+            </ol>
+            <h3 class="heading-3">Boxes have an outer display type AND an inner display type</h3>
+            <div class="even-columns">
+                <div>
+                    <h4 class="heading-4">Outer Display: Block</h4>
+                    <ul class="unordered-list">
+                        <li class="unordered-list-item">box will break onto new line</li>
+                        <li class="unordered-list-item">width/height values respected</li>
+                        <li class="unordered-list-item">padding, margin, border will push other boxes</li>
+                        <li class="unordered-list-item">default width is 100% of parents container</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="heading-4">Outer Display: Inline</h4>
+                    <ul class="unordered-list">
+                        <li class="unordered-list-item">doesn't cause line break</li>
+                        <li class="unordered-list-item">width/height values won't apply</li>
+                        <li class="unordered-list-item"><strong>vertical padding, margin, borders apply but won't affect other boxes</strong></li>
+                        <li class="unordered-list-item">default width is 100% of parents container</li>
+                    </ul>
+                </div>
+            </div>
+            <img src="images/box-model.png" alt="CSS box model">
+        </section>
+        
+        <!-- SECTION | normal flow -->
+        <section class="page-section">
+            <span class="overline">CSS FUNDAMENTALS</span>
+            <h2 class="heading-2">Normal Flow<h2>
+        </section>
+
+        <!-- SECTION | positioning & z-index -->
+        <section class="page-section">
+            <span class="overline">CSS FUNDAMENTALS</span>
+            <h2 class="heading-2">Positioning & Z-Index<h2>
+        </section>
+
+        <!-- SECTION | collapsing margins -->
+        <section class="page-section">
+            <span class="overline">CSS FUNDAMENTALS</span>
+            <h2 class="heading-2">Collapsing Margins<h2>
+        </section>
+
+        <!-- SECTION | before & after pseudo elemtns -->
+        <section class="page-section">
+            <span class="overline">CSS FUNDAMENTALS</span>
+            <h2 class="heading-2">:: Elements<h2>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
