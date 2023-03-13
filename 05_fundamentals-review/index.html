@@ -43,9 +43,9 @@
         <!-- SECTION | box model -->
         <section class="page-section">
             <span class="overline">CSS FUNDAMENTALS</span>
-            <h2 class="heading-2">Box Model<h2>
-            <h3 class="heading-3">There are two common types of boxes in CSS:</h3>    
-            <ol class="ordered-list">
+            <h2 class="heading-2">Box Model</h2>
+            <h3 class="heading-3">There are two common types of boxes in CSS:</h3>
+            <ol class="ordered-list" style="font-size: inherit;">
                 <li class="ordered-list-item">Block boxes</li>
                 <li class="ordered-list-item">Inline boxes</li>
             </ol>
@@ -65,36 +65,94 @@
                     <ul class="unordered-list">
                         <li class="unordered-list-item">doesn't cause line break</li>
                         <li class="unordered-list-item">width/height values won't apply</li>
-                        <li class="unordered-list-item"><strong>vertical padding, margin, borders apply but won't affect other boxes</strong></li>
+                        <li class="unordered-list-item"><strong>vertical padding, margin, borders apply but won't affect
+                                other boxes</strong></li>
                         <li class="unordered-list-item">default width is 100% of parents container</li>
                     </ul>
                 </div>
             </div>
             <img src="images/box-model.png" alt="CSS box model">
         </section>
-        
+
         <!-- SECTION | normal flow -->
         <section class="page-section">
             <span class="overline">CSS FUNDAMENTALS</span>
-            <h2 class="heading-2">Normal Flow<h2>
+            <h2 class="heading-2">Normal Flow</h2>
+            <p>Flow layout is the defualt layout behavior of a webpage. It dictates how block and inline elements are
+                displayed before any changes are made to their layouts.</p>
+            <h3>Block Direction</h3>
+            <p>In normal flow, block elements display after one another either vertically or horizontally depending on
+                the writing mode direciton. By default the writing mode is horizontal-tb, thus block elements stack on
+                top of each other in the horizontal direction from the top to bottom of the screen.</p>
+            <h3>Inline Direction</h3>
+            Inline elements, however, are displayed in the direction that words flow, yet again dependent upon the
+            writing mode. With default writing mode (horizontal-tb), the inline direction flows left to right.
         </section>
 
         <!-- SECTION | positioning & z-index -->
         <section class="page-section">
             <span class="overline">CSS FUNDAMENTALS</span>
-            <h2 class="heading-2">Positioning & Z-Index<h2>
+            <h2 class="heading-2">Positioning & Z-Index</h2>
+
+            <table class="table" cellspacing="0">
+                <tr class="table-heading-row">
+                  <th>&nbsp;</th>
+                  <th>How it works</th>
+                  <th>Normal Flow?</th>
+                  <th>New Stacking Context?</th>
+                  <th>Other</th>
+                </tr>
+                <tr>
+                  <th>Static</th>
+                  <td>Default value, positioned according to normal flow</td>
+                  <td>yes</td>
+                  <td>no</td>
+                  <td>top, left, bottom, right & z-index have no effect</td>
+                </tr>
+                <tr>
+                  <th>Relative</th>
+                  <td>Positioned according to normal flow of document, then offset realtive to itself</td>
+                  <td>yes</td>
+                  <td>yes; when z-index ≠ auto</td>
+                  <td>offset doesn't affect other elements</td>
+                </tr>
+                <tr>
+                  <th>Absolute</th>
+                  <td>Removed from normal flow of document & positioned relative to it's closet positioned ancestor (or the initial containg block in no positioned ancestors) </td>
+                  <td>No</td>
+                  <td>yes; when z-index ≠ auto</td>
+                  <td>doesn't cause collapsing margins</td>
+                </tr>
+                <tr>
+                  <th>Fixed</th>
+                  <td>Removed from normal flow of document & positioned relative to viewport</td>
+                  <td>No</td>
+                  <td>yes; always</td>
+                  <td>beware of ancestors with transform, perspective, or filter properties</td>
+                </tr>
+                <tr>
+                  <th>Sticky</th>
+                  <td>Positioned in normal flow of document, then offset relative to it;s nearest scrolling ancestor & containing block</td>
+                  <td>Yes</td>
+                  <td>yes, always</td>
+                  <td>in other words, sticky elements "stick" to its neareset ancestor that has a scrolling feature i.e. body with overflowing content in vertical direction</td>
+                </tr>
+              </table>
+              
+           
+
         </section>
 
         <!-- SECTION | collapsing margins -->
         <section class="page-section">
             <span class="overline">CSS FUNDAMENTALS</span>
-            <h2 class="heading-2">Collapsing Margins<h2>
+            <h2 class="heading-2">Collapsing Margins</h2>
         </section>
 
         <!-- SECTION | before & after pseudo elemtns -->
         <section class="page-section">
             <span class="overline">CSS FUNDAMENTALS</span>
-            <h2 class="heading-2">:: Elements<h2>
+            <h2 class="heading-2">:: Elements</h2>
         </section>
 
     </div>
