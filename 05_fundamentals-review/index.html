@@ -82,7 +82,7 @@
                 displayed before any changes are made to their layouts.</p>
             <h3>Block Direction</h3>
             <p>In normal flow, block elements display after one another either vertically or horizontally depending on
-                the writing mode direciton. By default the writing mode is horizontal-tb, thus block elements stack on
+                the writing mode direciton. By default, the writing mode is horizontal-tb, thus block elements stack on
                 top of each other in the horizontal direction from the top to bottom of the screen.</p>
             <h3>Inline Direction</h3>
             Inline elements, however, are displayed in the direction that words flow, yet again dependent upon the
@@ -93,6 +93,8 @@
         <section class="page-section">
             <span class="overline">CSS FUNDAMENTALS</span>
             <h2 class="heading-2">Positioning & Z-Index</h2>
+
+            <h3 class="heading-3">Positioning</h3>
 
             <table class="table" cellspacing="0">
                 <tr class="table-heading-row">
@@ -139,8 +141,30 @@
                 </tr>
               </table>
               
-           
-
+              <h3 class="heading-3">Z-Index</h3>
+              <p>Allows for the layerying and overlapping of elements on a <strong>z-axis</strong>. Initial = auto; alson known as layer 0.</p>
+              <quote>"Each box has a position in 3 dimensions. In additon, to their horizontal and vertical positions, boxes also lie along a z-axis and are formatted on top of each other"  ̶ CSS 2.1</quote>
+              <h4 class="heading-4">Stacking context</h4>
+              <p>Stacking contexts are a group of elements <strong>with a common parent</strong> that move up and down the z-axis together.</p>
+              <p><strong>Scenarioes of when "New Stacking Contexts" are created: </strong></p>
+              <ul>
+                <li class="unordered-list-item">Root element of the document (&lt;html&gt;)</li>
+                <li class="unordered-list-item">Element w/ a position value absolute or relative AND z-index value other than auto</li>
+                <li class="unordered-list-item">Element w/ a position value fixed or sticky</li>
+                <li class="unordered-list-item">Element that is a child of a flex or grid container, w/ z-index value other than auto.</li>
+                <li class="unordered-list-item">Element w/ an opacity less than 1</li>
+                <li class="unordered-list-item">Element with an isolation value isolate</li>
+                <a class="link-primary" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context" target="_blank">View all scenarioes</a>
+              </ul>
+              <div class="z-box">
+                <p>position: relative</p>
+                <p>z-index: auto</p>
+                <p><strong>I'm the containing block</strong></p>
+                <div class="z-box-child">
+                    <p>position: absolute</p>
+                    <p>z-index: 1</p>
+                </div>
+              </div>
         </section>
 
         <!-- SECTION | collapsing margins -->
