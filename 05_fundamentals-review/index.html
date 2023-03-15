@@ -143,7 +143,7 @@
               
               <h3 class="heading-3">Z-Index</h3>
               <p>Allows for the layerying and overlapping of elements on a <strong>z-axis</strong>. Initial = auto; alson known as layer 0.</p>
-              <quote>"Each box has a position in 3 dimensions. In additon, to their horizontal and vertical positions, boxes also lie along a z-axis and are formatted on top of each other"  ̶ CSS 2.1</quote>
+              <p><q>Each box has a position in 3 dimensions. In additon, to their horizontal and vertical positions, boxes also lie along a z-axis and are formatted on top of each other</q>  ̶ CSS 2.1</p>
               <h4 class="heading-4">Stacking context</h4>
               <p>Stacking contexts are a group of elements <strong>with a common parent</strong> that move up and down the z-axis together.</p>
               <p><strong>Scenarioes of when "New Stacking Contexts" are created: </strong></p>
@@ -154,23 +154,44 @@
                 <li class="unordered-list-item">Element that is a child of a flex or grid container, w/ z-index value other than auto.</li>
                 <li class="unordered-list-item">Element w/ an opacity less than 1</li>
                 <li class="unordered-list-item">Element with an isolation value isolate</li>
-                <a class="link-primary" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context" target="_blank">View all scenarioes</a>
               </ul>
-              <div class="z-box">
-                <p>position: relative</p>
-                <p>z-index: auto</p>
-                <p><strong>I'm the containing block</strong></p>
-                <div class="z-box-child">
-                    <p>position: absolute</p>
-                    <p>z-index: 1</p>
+              <a class="link link-primary" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context" target="_blank">View all scenarioes</a>
+              <div class="box-fixed box-primary">
+                <span>spanosition: relative</span></br>
+                <span>z-index: auto</span></br>
+                <span><strong>I'm the containing block</strong></span>
+                <div class="box-child box-child-bottom-right">
+                    <span>position: absolute</span> </br>
+                    <span>z-index: 1</span>
                 </div>
               </div>
         </section>
 
         <!-- SECTION | collapsing margins -->
-        <section class="page-section">
+        <section class="page-section collapsing">
             <span class="overline">CSS FUNDAMENTALS</span>
             <h2 class="heading-2">Collapsing Margins</h2>
+            <div class="even-columns">
+                <div>
+                    <div class="u-bg-neutral-400">
+                        <div class="box box-primary | u-margin-block-end-56">
+                            <span class="heading-4">margin-block-end: 56px</span>
+                        </div>
+                        <div class="box box-primary | u-margin-block-start-40">
+                            <span class="heading-4">margin-block-start: 40px</span>
+                        </div>
+                    </div>
+                    <div class="box box-fixed box-primary box-padding-none">
+                        <div class="box-child | u-margin-block-start-40" style="opacity: .85;"><p>Child - <strong>margin-top: 40px</strong></p>
+                        <p>(the top margin moved the parent element (the green box) down with the child element rather than push it away)</p></div>
+                    </div>
+                </div>
+                <div>
+                    <p>Collapsing margins occur when two margins touch each other. In the example to the left, the top box has a margin bottom of 56px and the bottom box a margin top of 40px. As a result of these margins touching, the margins collapse into one another to form a single margin. In this case, the larger margin wins and 56px becomes the margin between the two boxes.</p>
+                    <p>Collapsing margins can also occur when a child elements and it's parents element margins touch.  This is usually occurs when the parent element has no border or padding to push its children away from it's sides. As a result, attempting to use a margin-top on the child won't create distance between the parent container and child but will rather apply the margin to parent container.</p>
+                    <p>Using display: grid, flex removes collapsing margins from child elements</p>
+                </div>
+            </div>
         </section>
 
         <!-- SECTION | before & after pseudo elemtns -->
